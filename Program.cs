@@ -1,15 +1,27 @@
-﻿Music music = new Music();
-music.Name = "Sleepwalking";
-music.Author = "Bring Me The Horizon";
-music.Duration = 233;
-music.Available = true;
-Console.WriteLine(music.Description);
-music.ShowDetails();
+﻿
+Band bringMeTheHorizon = new()
+{
+    Name = "Bring Me The Horizon"
+};
 
-Music music2 = new Music();
-music2.Name = "Wait n bleed";
-music2.Author = "Slipknot";
-music2.Duration = 300;
-music2.Available = false;
-music2.ShowDetails();
+Album albumBringMeTheHorizon = new()
+{
+    Name = "Sepertinal"
+};
 
+Music sleepwalkingMusic = new("Sleepwalking", bringMeTheHorizon)
+{
+    Duration = 213
+};
+
+Music koolaidMusic = new("Kool-Aid", bringMeTheHorizon)
+{
+    Duration = 354
+};
+
+albumBringMeTheHorizon.AddMusic(sleepwalkingMusic);
+albumBringMeTheHorizon.AddMusic(koolaidMusic);
+
+
+bringMeTheHorizon.AddAlbum(albumBringMeTheHorizon);
+bringMeTheHorizon.ShowDiscos();

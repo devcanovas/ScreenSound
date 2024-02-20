@@ -1,7 +1,7 @@
-﻿class Music
+﻿class Music(string Name, Band Author)
 {
-    public string Name { get; set; }
-    public string Author { get; set; }
+    public string Name { get; set; } = Name;
+    public Band Author { get; } = Author;
     public int Duration { get; set; }
     public bool Available { get; set; }
     // Lambda
