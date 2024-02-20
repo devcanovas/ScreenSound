@@ -3,14 +3,14 @@
     public string name;
     public string author;
     public int duration;
-    public bool available;
+    public bool Available { get; set; }
 
     public void ShowDetails()
     {
         Console.WriteLine($"Nome: {name}");
         Console.WriteLine($"Artista: {author}");
         Console.WriteLine($"Duração: {duration}");
-        if (available)
+        if (Available)
         {
             Console.WriteLine("Disponível no plano!");
         } else
